@@ -1,0 +1,56 @@
+{
+    "Arpc Version": {
+        "prefix": "arpc",
+        "body": [
+            "arpc: $1",
+            "$2"
+        ],
+        "description": "Arpc version used in the project"
+    },
+    "Unique id": {
+        "prefix": "unique",
+        "body": [
+            "unique: $1",
+            "$2"
+        ],
+        "description": "Unique ID of the arpc file"
+    },
+    "Package": {
+        "prefix": "package",
+        "body": [
+            "package {",
+            "    $1",
+            "}",
+            "$2"
+        ],
+        "description": "Package name of generate file"
+    },
+    "Procedures": {
+        "prefix": "procedures",
+        "body": [
+            "procedures {",
+            "    $1",
+            "}",
+            "$2"
+        ],
+        "description": "Code block of procedures"
+    },
+    "Procedure": {
+        "prefix": "procedure",
+        "body": [
+            "procedure $1($2): $3",
+            "$4"
+        ],
+        "description": "Procedure"
+    },
+    "Param": {
+        "prefix": "param",
+        "body": [
+            "param $1 {",
+            "    $2",
+            "}",
+            "$3"
+        ],
+        "description": "Procedure"
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "name": "arpc",
+    "displayName": "arpc",
+    "description": "Language support for arpc.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "arpc",
+                "aliases": [
+                    "arpc",
+                    "arpc"
+                ],
+                "extensions": [
+                    "arpc"
+                ],
+                "configuration": "./language-configuration.json",
+                "icon": {
+                    "light": "./icons/light/arpc.svg",
+                    "dark": "./icons/dark/arpc.svg"
+                }
+            }
+        ],
+        "grammars": [
+            {
+                "language": "arpc",
+                "scopeName": "source.arpc",
+                "path": "./syntaxes/arpc.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "arpc",
+                "path": "./snippets/arpc.json"
+            }
+        ],
+        "productIconThemes": [
+            {
+                "id": "arpc",
+                "label": "Arpc For VS Code",
+                "path": "./producticons/arpc-product-icon-theme.json"
+            }
+        ],
+        "iconThemes": [
+            {
+                "id": "arpc",
+                "label": "arpc",
+                "path": "./icons/arpc-icon-theme.json"
+            }
+        ]
+    }
+}

@@ -1,0 +1,76 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "arpc",
+    "patterns": [
+        {
+            "include": "#comment"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#procedure"
+        },
+        {
+            "include": "#params"
+        },
+        {
+            "include": "#fields"
+        }
+    ],
+    "repository": {
+        "comment": {
+            "begin": "//",
+            "end": "\\n",
+            "name": "comment.line.double-slash"
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.arpc",
+                    "match": "\\b(arpc|unique|package|procedures)\\b"
+                }
+            ]
+        },
+        "procedure": {
+            "match": "\\b(procedure)\\s+(\\w+)\\((\\w+)\\):\\s*(\\w+)",
+            "captures": {
+                "1": {
+                    "name": "storage.type.arpc"
+                },
+                "2": {
+                    "name": "entity.name.function.arpc"
+                },
+                "3": {
+                    "name": "entity.name.tag.arpc"
+                },
+                "4": {
+                    "name": "entity.name.tag.arpc"
+                }
+            }
+        },
+        "params": {
+            "match": "\\b(param)\\s+(\\w+)\\s*\\{",
+            "captures": {
+                "1": {
+                    "name": "storage.type.arpc"
+                },
+                "2": {
+                    "name": "entity.name.type.arpc"
+                }
+            }
+        },
+        "fields": {
+            "match": "\\b(\\w+):\\s*(\\w+)\\s*=\\s*\\w+",
+            "captures": {
+                "1": {
+                    "name": "entity.other.attribute-name.arpc"
+                },
+                "2": {
+                    "name": "entity.name.tag.arpc"
+                }
+            }
+        }
+    },
+    "scopeName": "source.arpc"
+}
